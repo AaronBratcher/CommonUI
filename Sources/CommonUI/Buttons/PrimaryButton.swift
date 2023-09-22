@@ -12,7 +12,7 @@ public struct PrimaryButton: View {
 	private let text: LocalizedStringKey
 	@Binding var inProgress: Bool
 
-	public init(_ text: LocalizedStringKey, inProgress: Binding<Bool>, action: @escaping Action) {
+	public init(_ text: LocalizedStringKey, inProgress: Binding<Bool> = .constant(false), action: @escaping Action) {
 		self.text = text
 		self._inProgress = inProgress
 		self.action = action
